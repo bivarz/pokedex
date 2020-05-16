@@ -1,8 +1,8 @@
-import axios from 'axios';
-
-
-const api =  axios.create({
-  baseURL:"https://pokeapi.co/api/v2"
-})
-
-export default api;
+export default function connection = (connection => {
+    connection =  async () => {
+    const url = await fetch('https://pokeapi.co/api/v2/pokemon')
+    const data = await url.json()
+    console.log(data.results)
+    setPoke(data.results)
+)
+}

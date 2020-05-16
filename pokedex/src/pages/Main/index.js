@@ -1,46 +1,40 @@
 import React,{ useState, useEffect} from "react";
+import {getAllPokemons, getOnePokemon} from  './getPokemons'
 
 import { Container } from './styles'
 
 
+function Main(){
 
 
-export default function Main(){
- const [pokemons, setPokemons] = useState([]);
- const [nextPokemons, setnextPokemons] = useState([]);
-
-
-useEffect(()=>{
-    fetchItems();
-},[]);
+  const [poke, setPoke] = useState([])
+  const [nPoke, setnPoke] = useState([])
+  const [nextPageUrl, setnextPageUrl] = useState('')
+  const [prevPageUrl, setprevPageUrl] = useState('')
+  const baseUrl = 'https://pokeapi.co/api/v2/pokemon/'
 
 
 
-const fetchItems = async() =>{
-  const data = await fetch(
-    'https://pokeapi.co/api/v2/pokemon/'
+ useEffect (()=>{
+      async function getData(){
+        const response = await getAllPokemons(baseUrl);
+        setnextPageUrl(response.next);
+        setprevPageUrl(response.prev);
+      }
+       getData();
+  },[])
+  
+
+
+  return(
+    <Container> 
+    <ul>
+    
+   </ul>
+   </Container>
   );
-  const items = await data.json();
-
- setPokemons(items.results)  
 }
 
- 
-    return (
-    <Container>
-    <ul>
-    {pokemons.map(item => (
-      <h3 key={item.name}>{item.name} = {item.url}</h3>))}
-    </ul>
 
-    <button>
-       prev
-    </button>
-    <button>
-     next
-    </button>
-    </Container>
 
-  );
-    }
-
+export default Main;
