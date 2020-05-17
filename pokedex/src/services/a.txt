@@ -1,0 +1,12 @@
+ useEffect(()=>{
+    fetchPokemon()
+  },[])
+
+  const fetchPokemon = async () => {
+      const fetchPokemon = await fetch(`${url + pokeParams}`);
+      const data = await fetchPokemon.json()
+
+     
+      setPoke(data)
+  }
+  

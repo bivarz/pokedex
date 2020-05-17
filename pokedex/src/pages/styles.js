@@ -34,7 +34,7 @@ img{
 
 export const Button = styled.button`
 background: #ff0000;
-height:61px;
+height:60px;
 border:0;
 padding: 0 15px;
 margin-right: 25px;

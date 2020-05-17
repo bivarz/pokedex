@@ -5,14 +5,38 @@ export const Container = styled.div`
 *
 {
   font-family: 'Poppins',sans-serif;
+  text-decoration:none;
+  
+
 }
+
+
 
 .container{
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  a:visited :active {
+    color:black;
+  }
 }
 
+.container .card .button_id{
+  position: absolute;   
+  bottom:100px;
+  margin: 0px;
+  padding:5px;
+  width: 33px;
+  left: 5px; 
+  
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 50%;
+
+  color: white;
+  text-align: center;
+}
 .container .card .button_info{
   position: absolute;   
   bottom:100px;
@@ -132,6 +156,16 @@ letter-spacing: 1px;
   text-decoration: none;
   font-size: 14px;
   color: black;
+}
+.container .card a:visited{
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  .container .card a:active{
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+}
 }
 .id_card{
   position: absolute;

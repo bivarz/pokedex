@@ -11,7 +11,8 @@ export default function Routes(){
         <Nav />
       <Switch>       
         <Route path="/" exact component={Main} />
-        <Route path="/pokemon" component={Pokemon} />
+        <Route path="/pokemon/:id" component={Pokemon} />
+        
       </Switch>
     </Router>
   );

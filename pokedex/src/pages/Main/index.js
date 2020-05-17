@@ -56,11 +56,11 @@ function Main(){
 console.log(poke);
 
   return(
-    <>
+   
     
     <div>
       {loading ? <h1 style={{ textAlign: 'center' }}>Loading...</h1> : (
-        <>
+       
         <Container >
           <div className="button_area">
             <Button onClick={prev}>
@@ -73,6 +73,7 @@ console.log(poke);
           </div>
           <div className="card_content">
           <div className="card">
+          
             {poke.map((pokemon) => {
               return <Card key={pokemon.name} pokemon={pokemon} />
             })}
@@ -88,10 +89,10 @@ console.log(poke);
           </div>
           </div>
         </Container> 
-        </>
+       
       )}
     </div>
-  </>
+ 
   );
 }
 
