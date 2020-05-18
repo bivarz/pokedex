@@ -1,6 +1,9 @@
 # Pokedex
 
-Desafio
+Desafio:
+
+Pronto:
+https://youtu.be/sKATFeqdJZI
 
 Criar uma aplicação web responsável por listar todos os pokémons e possibilitar visualizar dados específicos de cada um. Para tal, você fará uso da PokéAPI (disponível em https://pokeapi.co/), através de requisições REST que retornarão os dados desejados.
 
@@ -19,3 +22,6 @@ Deve ser possível retornar da página do pokémon para a página principal
 Não utilizar bibliotecas externas com estilos e elementos prontos (Bootstrap e Material UI, por exemplo)
 Deve ser funcional no navegador Google Chrome
 O idioma da interface deve estar em português ou inglês
+
+Resultado:
+
