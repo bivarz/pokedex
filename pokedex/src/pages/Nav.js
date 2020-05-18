@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom'
 import {FaHome } from 'react-icons/fa'
-import {  Nav, Button } from './styles'
+import {  Nav, Button } from './Styles'
 import pokeReact from '../assets/pokeReact.png'
 
 

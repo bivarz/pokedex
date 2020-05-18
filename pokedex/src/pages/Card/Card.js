@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom'
 
-import { Container } from './style.js';
+import { Container } from './Style.js';
 
 function Card({ pokemon }) {
   const colorType= {

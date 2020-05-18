@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api.js'
 import { Link } from 'react-router-dom'
-import { Container } from './style'
-import colorTypes from './colors'
+import { Container } from './Style'
+import colorTypes from './Colors'
 
 
 

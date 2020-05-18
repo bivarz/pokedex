@@ -2,7 +2,7 @@ import React,{ useState, useEffect} from "react";
 
 import {getAllPokemons, getOnePokemon} from  '../../services/getPokemons'
 import Card from '../../pages/Card/Card'
-import { Container, Button } from './styles'
+import { Container, Button } from './Styles'
 import { FaArrowCircleRight ,FaArrowCircleLeft} from 'react-icons/fa'
 
 
