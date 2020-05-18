@@ -1,24 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api.js'
+import { Link } from 'react-router-dom'
 import { Container } from './style'
 import colorTypes from './colors'
+
 
 
 function Pokemon({ match }) {
 
   const [poke, setPoke] = useState({
     sprites:{},
-    stats:[]
+    stats:[],
+    abilites:[]
   }); 
   const pokeImage = poke.sprites.front_default
   const [image, setImage] = useState([pokeImage]);
+  
 
 
   const [loading, setLoading] = useState(true) 
   const pokeParams = match.params.id
   
 
-useEffect((primary)=>{ 
+useEffect(()=>{ 
 
   async function fecthPokemon(){
       const results = await api.get(`${pokeParams}`);  
@@ -31,8 +35,10 @@ useEffect((primary)=>{
 },[])
 
 useEffect(()=>{ 
-  handleChangeImageFront();  
-},[])
+ setImage([poke.sprites.front_default])
+},[poke])
+
+
 
 
 function handleChangeImageBack(){
@@ -43,6 +49,9 @@ function handleChangeImageFront(){
   setImage([poke.sprites.front_default])
 }  
 
+
+
+console.log(poke.abilities)
 
 return(
   
@@ -79,10 +88,26 @@ return(
            ))}
          </div>  
       </span>      
-      <div className="bu">     
-      
-      </div>
-    </div>
+      <span className="bu">        
+          <div className="bu_top">  
+           <div className="w">
+              <h3>Weight</h3>
+              <p>{`${poke.weight/10}`} Kg</p>
+           </div>  
+           <div className="h">
+              <h3>Height</h3>
+              <p>{`${poke.height*10}`} cm</p> 
+            </div>
+            <div className="abilites">
+            <h3>Abilites</h3>
+             {poke.abilities.map(s => (
+           <span key={s.ability.name}>{ `${(s.ability.name).split(' ').map((l) => l.charAt(0).toUpperCase() + l.substring(1)).join(' ')}`}<br/></span>     
+           ))}    
+            </div>
+          </div>                       
+        </span>
+      </div> 
+   
     </Container> 
    
    )}
