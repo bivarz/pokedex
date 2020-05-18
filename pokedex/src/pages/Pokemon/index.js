@@ -99,7 +99,7 @@ return(
               <p>{`${poke.height*10}`} cm</p> 
             </div>
             <div className="abilites">
-            <h3>Abilites</h3>
+            <h3>Abilities</h3>
              {poke.abilities.map(s => (
            <span key={s.ability.name}>{ `${(s.ability.name).split(' ').map((l) => l.charAt(0).toUpperCase() + l.substring(1)).join(' ')}`}<br/></span>     
            ))}    
