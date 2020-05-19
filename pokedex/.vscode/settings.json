@@ -7,7 +7,7 @@
       
       "editor.renderLineHighlight": "gutter",
       "editor.tabSize": 2,
-      "terminal.integrated.fontSize": 13.75,
+      "terminal.integrated.fontSize": 12,
       "emmet.includeLanguages": {
           "javascript":"javascriptreact"
       },
