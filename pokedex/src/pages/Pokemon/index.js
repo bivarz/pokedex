@@ -5,6 +5,8 @@ import { Container } from "./Style";
 import colorTypes from "./Colors";
 
 function Pokemon({ match }) {
+ 
+  
   const [poke, setPoke] = useState({
     sprites: {},
     stats: [],
@@ -121,8 +123,10 @@ function Pokemon({ match }) {
           <div className="down">
             
            
-              <Link to={pokeParams>=1 ? (`${poke.id -1}`) : alert("No more pages") }>            
-                 <button type="button"> Previous </button>           
+              <Link to={pokeParams >=1 ? (`${poke.id -1}`) : alert("No More Pages") }>            
+                 <button type="button"> Previous </button>   
+                
+                     
               </Link> 
               
               <Link to={pokeParams >= 10157 ? (`${poke.id +0}`) : (`${poke.id +1}`)  }>      
